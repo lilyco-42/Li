@@ -15,6 +15,7 @@ fn main() {
     // 此时可能有编译器提醒 变量未使用,黄色是警告warning
     // 忽略,后续会使用
     // 从输入输出(io)中的输入(stdin)读取一行(read_line) 存入前面的变量,若失败就提示expect()
+    // &mut 表示可变借用. 借用的意思是 图书馆借书类似的概念
     io::stdin().read_line(&mut ly_guess).expect("读取失败");
     // 可以看到边写,边报错消失,我们处理了读取失败的错误情况.
     println!("你输入的是{}", ly_guess)
