@@ -18,10 +18,14 @@ fn main() {
     // &mut 表示可变借用. 借用的意思是 图书馆借书类似的概念
     io::stdin().read_line(&mut ly_guess).expect("读取失败");
     // 可以看到边写,边报错消失,我们处理了读取失败的错误情况.
-    println!("你输入的是{}", ly_guess)
+    // 若无expect 返回类型是 Result 封装的数据,需要解出来
+    println!("你输入的是{}", ly_guess);
     // 此时 cargo run
     // 猜数字
     //输入一个数字吧
     //98
     //你输入的是98
+    let ly_rand_number = rand::random_range(0..=100);
+
+    println!("随机数:{}", ly_rand_number);
 }
