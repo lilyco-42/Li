@@ -2,6 +2,7 @@
 use std::{
     cmp::Ordering::{Equal, Greater, Less},
     io,
+    process::exit,
 };
 
 fn main() {
@@ -52,7 +53,8 @@ fn main() {
                 println!("大了")
             }
             Equal => {
-                println!("相等,恭喜你猜对了")
+                println!("相等,恭喜你猜对了");
+                exit(0);
             }
         }
     }
