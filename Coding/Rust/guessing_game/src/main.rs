@@ -1,4 +1,5 @@
-use std::{arch::x86_64, io};
+// 这一行我们zed 和 rust lsp自动补全了
+use std::io;
 
 fn main() {
     println!("猜数字");
